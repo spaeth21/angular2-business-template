@@ -1,0 +1,25 @@
+﻿
+<nav class="top-nav hide-on-small-and-down menuBarSideBarTransistion" [class.active]="sideBarOpen">
+    <div class="nav-wrapper menuBar-top">
+        <ul class="left">
+            <!--<li  (click)="toggleSideBar($event)" class="center-align menuBar-liSpacing"><i [ngClass]="sideBarOpen ? 'fa fa-bars fa-2x' : 'fa fa-angle-right fa-2x'"></i></li>-->
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Navigation <span class="caret"></span></a>
+                <ul class="dropdown-menu panelColor" id="mainDropdown" >
+                    <li  *ngFor="#route of menu"><a [routerLink]="[route.route]" style="width:200px"><i [ngClass]="route.icon" style="width:60px;padding-right:20px;padding-left:10px"></i>{{route.name}}</a></li>
+                </ul>
+            </li>
+        </ul>
+        <!--<a href="#" class="brand-logo pull-left">
+            <img src="../../../images/pixis_logo.jpg" style="height:51px" /></a>-->
+        <ul class="right hide-on-med-and-down">
+            <li class="menuBar-liSpacing" style="width:150px !important"><a>
+    <i class="fa fa-search left menuBar-icons"></i>Search
+</a></li>
+            <li class="center-align menuBar-liSpacing"><a><i class="fa fa-envelope-square fa-2x menuBar-icons"></i></a></li>
+            <li class="center-align menuBar-liSpacing"><a><i class="fa fa-cogs fa-2x menuBar-icons"></i></a></li>
+            <li class="center-align menuBar-liSpacing"><a><i class="fa fa-ellipsis-v fa-2x menuBar-icons"></i></a></li>
+        </ul>
+    </div>
+</nav>
+<ibp-sidebar (toggleValue)="toggleSideBar($event)"></ibp-sidebar>

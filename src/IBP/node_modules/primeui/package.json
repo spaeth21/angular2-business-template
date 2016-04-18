@@ -1,0 +1,87 @@
+{
+  "_args": [
+    [
+      "primeui@4.1.6",
+      "D:\\projects\\Clients\\IBP\\IBP\\src\\IBP"
+    ]
+  ],
+  "_from": "primeui@4.1.6",
+  "_id": "primeui@4.1.6",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/primeui",
+  "_nodeVersion": "5.4.0",
+  "_npmOperationalInternal": {
+    "host": "packages-13-west.internal.npmjs.com",
+    "tmp": "tmp/primeui-4.1.6.tgz_1458922129429_0.5948322247713804"
+  },
+  "_npmUser": {
+    "email": "cagatay.civici@gmail.com",
+    "name": "cagatay.civici"
+  },
+  "_npmVersion": "3.3.12",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "primeui",
+    "raw": "primeui@4.1.6",
+    "rawSpec": "4.1.6",
+    "scope": null,
+    "spec": "4.1.6",
+    "type": "version"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/primeui/-/primeui-4.1.6.tgz",
+  "_shasum": "c14b28c54f1c8d9fc934d2cf78e84e51bb180421",
+  "_shrinkwrap": null,
+  "_spec": "primeui@4.1.6",
+  "_where": "D:\\projects\\Clients\\IBP\\IBP\\src\\IBP",
+  "author": {
+    "name": "PrimeTek"
+  },
+  "bugs": {
+    "url": "https://github.com/primefaces/primeui-distribution/issues"
+  },
+  "dependencies": {},
+  "description": "'PrimeUI is a collection of rich javascript widgets and web components based on jQuery UI API'",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "c14b28c54f1c8d9fc934d2cf78e84e51bb180421",
+    "tarball": "https://registry.npmjs.org/primeui/-/primeui-4.1.6.tgz"
+  },
+  "gitHead": "4998c0878c0034474055f4d887f75219b4ffb3fc",
+  "homepage": "https://github.com/primefaces/primeui-distribution#readme",
+  "keywords": [
+    "jquery-plugin",
+    "web-components",
+    "ecosystem:jquery",
+    "dialog",
+    "datatable",
+    "grid",
+    "tab",
+    "accordion",
+    "tree",
+    "treetable"
+  ],
+  "license": "Apache-2.0",
+  "main": "primeui.min.js",
+  "maintainers": [
+    {
+      "email": "cagatay.civici@gmail.com",
+      "name": "cagatay.civici"
+    }
+  ],
+  "name": "primeui",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/primefaces/primeui-distribution.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "4.1.6"
+}

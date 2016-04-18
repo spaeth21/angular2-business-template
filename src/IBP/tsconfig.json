@@ -1,0 +1,17 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "noImplicitAny": false,
+    "noEmitOnError": true,
+    "removeComments": false,
+    "sourceMap": false,
+    "target": "es5",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "module": "system",
+    "moduleResolution": "node"
+  },
+  "files": [
+    "./wwwroot/app/boot/boot.ts"
+  ]
+}

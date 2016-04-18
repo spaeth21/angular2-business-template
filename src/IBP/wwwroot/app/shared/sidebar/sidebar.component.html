@@ -1,0 +1,26 @@
+﻿
+<ul id="nav-mobile" class="side-nav fixed customSideBar font" [class.minibar]="sideBarOpen === false" (mouseenter)="onToggleSideBar(true)" (mouseleave)="onToggleSideBar(false)"  >
+    <li [routerLink]="['./Dashboard']" style="background-color: #2C0846; height: 64px;">
+        <img src="../../../images/logo.png" style="top: 15%;position:relative" [style.width]="sideBarOpen ? '40px' : '40px'" [style.height]="sideBarOpen ? '40px' : '40px'" />
+    </li>
+    <li [routerLink]="['./Dashboard']" [class.active]="router.isRouteActive(router.generate(['./Dashboard']))" id="sideBarIcon"><div class="sideNavSpacing"><span [class.fa-2x]="sideBarOpen"  class="fa fa-stack"><i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-dashboard fa-stack-1x"></i></span><span class="hideText" [class.hideTextActive]="sideBarOpen">Dashboard</span></div></li>
+    <li class="divider"></li>
+    <li [routerLink]="['./Schedule']" [class.active]="router.isRouteActive(router.generate(['./Schedule']))" id="sideBarIcon"><div class="sideNavSpacing"><span [class.fa-2x]="sideBarOpen" class="fa fa-stack"><i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-calendar fa-stack-1x"></i></span><span class="hideText"  [class.hideTextActive]="sideBarOpen">Schedule</span></div></li>
+    <li class="divider"></li>
+    <li [routerLink]="['./Orders']" [class.active]="router.isRouteActive(router.generate(['./Orders']))" id="sideBarIcon"><div class="sideNavSpacing"><span [class.fa-2x]="sideBarOpen" class="fa fa-stack"><i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-clipboard fa-stack-1x"></i></span><span class="hideText" [class.hideTextActive]="sideBarOpen">Orders</span></div></li>
+    <li class="divider"></li>
+    <li [routerLink]="['./Quotes']" [class.active]="router.isRouteActive(router.generate(['./Quotes']))" id="sideBarIcon"><div class="sideNavSpacing"><span [class.fa-2x]="sideBarOpen" class="fa fa-stack"><i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-money fa-stack-1x"></i></span><span class="hideText" [class.hideTextActive]="sideBarOpen">Quotes</span></div></li>
+    <li class="divider"></li>
+    <li class="dropdown" id="sideBarIcon" [class.active]="checkActive()" >
+        <div class="sideNavSpacing">
+            <span data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" [class.fa-2x]="sideBarOpen" [routerLink]="['./Create']" class="fa fa-stack"><i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-bolt fa-stack-1x"></i></span><span  class="hideText" [class.hideTextActive]="sideBarOpen">Create</span>
+            <ul class="dropdown-menu panelColor openRight" id="mainDropdown">
+                <li [class.active]="router.isRouteActive(router.generate(['./Client']))" [routerLink]="['./Client']" class="sideBarDropDown"><i class="fa fa-globe" style="margin-right: 10px;"></i>Client</li>
+                <li [class.active]="router.isRouteActive(router.generate(['./Job']))" [routerLink]="['./Job']" class="sideBarDropDown"><i class="fa fa-tasks" style="margin-right: 10px;"></i>Job</li>
+                <li [class.active]="router.isRouteActive(router.generate(['./WorkOrder']))" [routerLink]="['./WorkOrder']" class="sideBarDropDown"><i class="fa fa-clipboard" style="margin-right: 10px;"></i>Work-Order</li>
+                <li [class.active]="router.isRouteActive(router.generate(['./SalesPerson']))" [routerLink]="['./SalesPerson']" class="sideBarDropDown"><i class="fa fa-user" style="margin-right: 10px;"></i>Salesperson</li>
+            </ul>
+        </div>
+    </li>
+</ul>
+

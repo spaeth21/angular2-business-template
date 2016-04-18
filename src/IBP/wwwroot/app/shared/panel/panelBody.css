@@ -1,0 +1,49 @@
+﻿
+
+.panelBodyBlock {
+    position: relative;
+    color: #EADDF4;
+    padding: 10px 20px 10px 20px !important;
+    background-color: #6F2E9E;
+    border-radius: 2px;
+    opacity: .7;
+    transition-duration: 500ms;
+}
+.fixedLarge {
+    height: 800px !important;
+}
+.fixedmedium {
+    height: 600px !important;
+}
+.fixedSmall {
+    height: 150px !important;
+}
+.fixedMini {
+    height: 80px !important;
+}
+    .panelBodyBlock .panelBodyTitleLeft {
+        position:absolute;
+        left: 2%;
+        top: 20px;
+        text-transform: uppercase;
+    }
+    .panelBodyBlock .panelBodyIconRight {
+        position:absolute;
+        right: 3%;
+        top: 20px;
+        opacity: 0.1;
+        transition-duration: 500ms;
+        transform: scale(1.4, 1.4);
+    }
+    .panelBodyBlock:hover .panelBodyIconRight {
+        opacity: 0.6;
+        transition-duration: 500ms;
+    }
+    .mainPanelBodyContent{
+        margin: 0;
+    }
+.panelBodyBlock:hover {
+    opacity: 1;
+    box-shadow: 4px 6px 8px #80a0b4;
+    transition-duration: 500ms;
+}

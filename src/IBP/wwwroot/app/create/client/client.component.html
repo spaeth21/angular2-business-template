@@ -1,0 +1,54 @@
+﻿
+<div class="row">
+    <div class="col s4">
+        <panel-header mainTitle="Create Client" secondaryTitle="Create a new Client"></panel-header>
+    </div>
+</div>
+<div class="row">
+    <div class="col s4">
+        <panel-body mainDescription="Customer Details" (mouseenter)="onFocusElement($event, customerNameLocal)" backgroundColor="#360E52" panelSize="fixedLarge">
+            <div class="panelTopButtons">
+                <button [disabled]="!clientForm.valid" class="btn waves-effect newButton">+ New</button>
+            </div>
+            <form [ngFormModel]="clientForm">
+                <div class="row">
+                    <div class="input-field col l12" style="margin-top: 45px">
+                        <input #customerNameLocal type="text" (mouseenter)="onFocusElement($event, customerNameLocal)" ngControl="customerName" id="customerName" class="validate" />
+                        <label for="customerName">Client / Business Name</label>
+                    </div>
+
+                    <div class="input-field col l12">
+                        <input #customerPhoneLocal type="text" id="customerPhone" (mouseenter)="onFocusElement($event, customerPhoneLocal)" ngControl="phone" class="validate" />
+                        <label for="customerPhone">Phone</label>
+                    </div>
+                    <div class="input-field col l12">
+                        <input #customerEmailLocal type="text" id="customerEmail" (mouseenter)="onFocusElement($event, customerEmailLocal)" ngControl="email" class="validate" />
+                        <label for="customerEmail">Email</label>
+                    </div>
+                    <div class="input-field col l12">
+                        <input #customerAddressLocal type="text" id="customerAddress" (mouseenter)="onFocusElement($event, customerAddressLocal)" ngControl="address" class="validate" />
+                        <label for="customerAddress">Address</label>
+                    </div>
+                    <div class="input-field col l12">
+                        <input #customerCityLocal type="text" id="customerCity" (mouseenter)="onFocusElement($event, customerCityLocal)" ngControl="city" class="validate" />
+                        <label for="customerCity">City</label>
+                    </div>
+                    <div class="input-field col l6">
+                        <input #customerStateLocal type="text" id="customerState" (mouseenter)="onFocusElement($event, customerStateLocal)" ngControl="state" class="validate" />
+                        <label for="customerState">State</label>
+                    </div>
+                    <div class="input-field col l6">
+                        <input #customerZipLocal type="text" id="customerZip" (mouseenter)="onFocusElement($event, customerZipLocal)" ngControl="zip" class="validate" />
+                        <label for="customerZip">Zip</label>
+                    </div>
+                </div>
+            </form>
+            <div class="panelBottomButtonsRight">
+                <button class="btn waves-effect newButton" [disabled]="!clientForm.valid">+ New</button>
+            </div>
+            <div class="panelBottomButtonsLeft">
+                <button class="btn waves-effect">View Existing Clients</button>
+            </div>
+        </panel-body>
+    </div>
+</div>

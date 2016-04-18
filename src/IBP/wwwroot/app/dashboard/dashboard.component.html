@@ -1,0 +1,148 @@
+﻿<div class="row">
+    <div class="col l9">
+        <div class="row">
+            <div class="col l12">
+                <panel-header mainTitle="Live Analytics" secondaryTitle="Customized summary reporting"></panel-header>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col l4">
+                <panel-body panelSize="fixedSmall" mainDescription="Open Orders" icon="fa fa-clipboard fa-2x"></panel-body>
+            </div>
+            <div class="col l4">
+                <panel-body panelSize="fixedSmall" backgroundColor="#4060BD" mainDescription="Quotes" icon="fa fa-edit fa-2x"></panel-body>
+            </div>
+            <div class="col l4">
+                <panel-body panelSize="fixedSmall" backgroundColor="#5892EF" mainDescription="Activity" icon="fa fa-users fa-2x"></panel-body>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col l12">
+                <panel-header mainTitle="Calendar" secondaryTitle="Work schedule birds-eye view"></panel-header>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col l12">
+                    <panel-body backgroundColor="#1A1E26">
+                        <div class="row">
+                            <div class="col l3">
+                                <div class="row"><br /></div>
+                                <div class="row"><br /></div>
+                                <div class="row">
+                                    <div class="col l12">
+                                        <panel-body panelSize="fixedMini" backgroundColor="#5892EF" mainDescription="Meeting" icon="fa fa-comments">
+                                            <p style="margin-top:35px;">Plan a meeting and invites</p>
+                                        </panel-body>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col l12">
+                                        <panel-body panelSize="fixedMini" backgroundColor="#4060BD" mainDescription="Event" icon="fa fa-cog">
+                                            <p style="margin-top:35px;">Plan an event</p>
+                                        </panel-body>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col l12">
+                                        <panel-body panelSize="fixedMini" backgroundColor="#6F2E9E" mainDescription="Follow Up" icon="fa fa-cog">
+                                            <p style="margin-top:35px;">Plan a followup</p></panel-body>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col l9">
+                                <p-schedule [height]="calendarHeight" [header]="header"  (onDayClick)="handleDayClick($event)">
+                                </p-schedule>
+                            </div>
+                        </div>
+</panel-body>
+            </div>
+        </div>
+    </div>
+    <div class="col l3">
+        <div class="row">
+            <div class="col l12">
+                <panel-header mainTitle="Start Work" secondaryTitle="Quick work-order form"></panel-header>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col l12">
+                <panel-body mainDescription="Customer Details" backgroundColor="#360E52">
+                    <div class="panelTopButtons">
+                        <button class="btn waves-effect newButton" style="background-color: #DE670F">+ New</button>
+                    </div>
+                    <form>
+                        <div class="row">
+                            <div class="input-field col l12" style="margin-top: 45px">
+                                <input type="text" id="customerName" class="validate" />
+                                <label for="customerName">Client / Business Name</label>
+                            </div>
+
+                            <div class="input-field col l12">
+                                <input type="text" id="customerPhone" class="validate" />
+                                <label for="customerPhone">Phone</label>
+                            </div>
+                            <div class="input-field col l12">
+                                <input type="text" id="customerEmail" class="validate" />
+                                <label for="customerEmail">Email</label>
+                            </div>
+                            <div class="input-field col l12">
+                                <input type="text" id="customerAddress" class="validate" />
+                                <label for="customerAddress">Address</label>
+                            </div>
+                            <div class="input-field col l12">
+                                <input type="text" id="customerCity" class="validate" />
+                                <label for="customerCity">City</label>
+                            </div>
+                            <div class="input-field col l6">
+                                <input type="text" id="customerState" class="validate" />
+                                <label for="customerState">State</label>
+                            </div>
+                            <div class="input-field col l6">
+                                <input type="text" id="customerZip" class="validate" />
+                                <label for="customerZip">Zip</label>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="panelBottomButtonsRight">
+                        <button class="btn waves-effect newButton" style="background-color: #DE670F">+ New</button>
+                    </div>
+                </panel-body>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- Calendar Dialog popup -->
+
+
+
+
+<p-dialog header="Event Details" [(visible)]="dialogVisible" [responsive]="true" showEffect="fade" [modal]="true">
+    <div class="ui-grid ui-grid-responsive ui-fluid">
+        <div class="ui-grid-row">
+            <div class="ui-grid-col-4"><label for="vin">Title</label></div>
+            <div class="ui-grid-col-8"><input pInputText id="title" /></div>
+        </div>
+        <div class="ui-grid-row">
+            <div class="ui-grid-col-4"><label for="start">Start</label></div>
+            <div class="ui-grid-col-8"><p-calendar id="start" dateFormat="yy-mm-dd"></p-calendar></div>
+        </div>
+        <div class="ui-grid-row">
+            <div class="ui-grid-col-4"><label for="end">End</label></div>
+            <div class="ui-grid-col-8"><p-calendar id="end" dateFormat="yy-mm-dd" defaultDate="2016-01-01" placeholder="Optional"></p-calendar></div>
+        </div>
+        <div class="ui-grid-row">
+            <div class="ui-grid-col-4"><label for="allday">All Day</label></div>
+            <div class="ui-grid-col-8"><p-toggleButton style="width:150px" onLabel="Yes" offLabel="No"></p-toggleButton></div>
+        </div>
+    </div>
+    <footer>
+        <div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix">
+            <button type="button" pButton icon="fa-close" label="Delete"></button>
+            <button type="button" pButton icon="fa-check" label="Save"></button>
+        </div>
+    </footer>
+</p-dialog>

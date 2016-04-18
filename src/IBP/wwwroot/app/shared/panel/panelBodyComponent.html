@@ -1,0 +1,7 @@
+﻿<div class="panelBodyBlock" [style.background-color]="backgroundColor" [ngClass]="panelSize" >
+    <div class="panelBodyTitleLeft" [style.color]="textColor">{{mainDescription}}</div>
+    <div class="panelBodyIconRight" [style.color]="textColor"><i [ngClass]="icon"></i></div>
+    <span class="mainPanelBodyContent">
+        <ng-content></ng-content>
+    </span>
+</div>

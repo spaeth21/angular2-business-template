@@ -1,0 +1,209 @@
+﻿
+
+/*Generic Main Styling*/
+ body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color:#15181E !important;
+  }
+.footerContent {
+    background-color: #1A1E26;
+    color: #595F65; 
+}
+
+a {
+    text-decoration:none !important;
+}
+
+#loading {
+top:40%;left:50%;height:200px;width:200px;position:absolute
+}
+
+.mainContent {
+ 
+    width: calc(100% - 60px);
+    left: 50px;
+    top: 90px;
+    position:absolute;
+    transition-duration:500ms;
+    margin-bottom: 100px;
+}
+.mainContent.active {
+    width: calc(100% - 130px);
+    left: 120px;
+    top: 90px;
+    position:absolute;
+    transition-duration:500ms;
+}
+  .marginRow{
+   margin-bottom:0px !important; 
+   }
+
+
+
+/*End Generic Main Styling*/
+
+/* Login keep input box smaller */
+.login input {
+    max-width: 280px;
+}
+
+/*End Login*/
+
+ /*Menu-Bar Styling*/
+.menuBar-top {
+color:white;
+background-color:#360E52;
+position:fixed;
+
+}
+.menuBar-icons {
+color:#5894F2;
+}
+.menuBar-liSpacing {
+    width:100px;border-right:1px solid #512471; padding: 1px 0px;height: 64px;
+}
+
+.panelColor {
+    background-color: #1A1E26 !important;
+    color: #595F65 !important;
+}
+    .panelColor > li > a {
+    
+    background-color: #1A1E26 !important;
+    color: #595F65 !important;
+    }  
+    .panelColor > li > a:hover {
+    
+    background-color: #222936 !important;
+    color: #595F65 !important;
+    }
+    
+.menuBarSideBarTransistion {
+    width: calc(100% - 40px);
+    left: 40px;
+    position: absolute;
+    transition-duration:500ms;
+    background-color:#360E52;
+}
+.menuBarSideBarTransistion.active {
+    width: calc(100% - 90px);
+    left: 90px;
+    position:absolute;
+    transition-duration:500ms;
+    background-color:#360E52;
+}
+
+/*This is also for sidebar dropdown animation*/
+.dropdown .dropdown-menu {
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+    -moz-transition:    all 700ms ease;
+    -webkit-transition: all 700ms ease;
+    -o-transition:      all 700ms ease;
+    -ms-transition:     all 700ms ease;
+    transition:         all 700ms ease;
+}
+.dropdown:hover .dropdown-menu {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+
+/*End MenuBar Styling*/
+
+/*Button Styling*/
+.submitButtonColor {
+    background-color:#4060BD;
+    color: white;
+
+}
+button[disabled] {
+cursor: not-allowed !important;
+}
+
+
+.panelTopButtons {
+    position:absolute;
+    top: 20px !important;
+    right: 2% !important;
+}
+.newButton {
+    
+    padding: 0px 5px 0px 5px !important;
+    width: 80px;
+    height: 30px;
+    font-size: 12px;
+    background-color:#DE670F;
+}
+
+.panelBottomButtonsRight {
+    position:absolute;
+    bottom: 2%;
+    right: 2%;
+}
+.panelBottomButtonsLeft {
+    position:absolute;
+    bottom: 2%;
+    left: 2%;
+}
+
+/*End Button Styling*/
+
+.divider {
+  height: 1px;
+  overflow: hidden;
+  background-color: #222936;
+}
+
+
+/*Fonts*/
+.font {
+    font-family: 'moderne sans';
+    font-size: 10px;
+    text-transform:uppercase;
+}
+.fontWelcome {
+    font-family: aventura-bold;
+    color: white;
+}
+@font-face {
+    font-family: 'moderne sans';
+    src: url('fonts/moderne sans.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'ansley display-regular';
+    src: url('fonts/ansley display-regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'bizon';
+    src: url('fonts/bizon.otf') format('opentype');
+}
+@font-face {
+    font-family: 'aventura-bold';
+    src: url('fonts/aventura-bold.otf') format('opentype');
+}
+
+/*End Fonts*/
+
+
+
+
+
+  /*PrimeNG Widget Styling Dialogs/Calendar etc.*/
+
+.ui-widget { font-family: Segoe UI, Arial, sans-serif; font-size: 1em;}
+.ui-widget .ui-widget { font-size: 1em; }
+.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button { font-family: Segoe UI, Arial, sans-serif; font-size: 1em;  color: black; border-radius: 3px}
+.ui-widget-content { border: 1px solid #666666; background-color:white ; color: black; }
+.ui-widget-content a { color: #ffffff; }
+.ui-widget-header { border: 1px solid #333333; background: #333333; color: #ffffff; font-weight: bold; }
+.ui-widget-header a { color: #ffffff; }
+
+ /*Interaction states
+----------------------------------*/
+ .ui-state-default { border: 1px solid #666666; background: #555555; font-weight: bold; color: #eeeeee }
+ /*End PrimeNG Widget Styling*/

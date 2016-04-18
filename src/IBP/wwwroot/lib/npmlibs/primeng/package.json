@@ -1,0 +1,80 @@
+{
+  "_args": [
+    [
+      "primeng@1.0.0-beta.1",
+      "D:\\projects\\Clients\\IBP\\IBP\\src\\IBP"
+    ]
+  ],
+  "_from": "primeng@1.0.0-beta.1",
+  "_id": "primeng@1.0.0-beta.1",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/primeng",
+  "_nodeVersion": "5.4.0",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/primeng-1.0.0-beta.1.tgz_1460321305631_0.16909099253825843"
+  },
+  "_npmUser": {
+    "email": "cagatay.civici@gmail.com",
+    "name": "cagatay.civici"
+  },
+  "_npmVersion": "3.3.12",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "primeng",
+    "raw": "primeng@1.0.0-beta.1",
+    "rawSpec": "1.0.0-beta.1",
+    "scope": null,
+    "spec": "1.0.0-beta.1",
+    "type": "version"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/primeng/-/primeng-1.0.0-beta.1.tgz",
+  "_shasum": "fd3078a2bb3700ee47e2ed1fe34d5e2b3562967c",
+  "_shrinkwrap": null,
+  "_spec": "primeng@1.0.0-beta.1",
+  "_where": "D:\\projects\\Clients\\IBP\\IBP\\src\\IBP",
+  "dependencies": {},
+  "description": "UI Components for AngularJS 2",
+  "devDependencies": {
+    "concurrently": "^2.0.0",
+    "lite-server": "^2.1.0",
+    "typescript": "^1.8.9",
+    "typings": "^0.7.11"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "fd3078a2bb3700ee47e2ed1fe34d5e2b3562967c",
+    "tarball": "https://registry.npmjs.org/primeng/-/primeng-1.0.0-beta.1.tgz"
+  },
+  "gitHead": "662ae7b9fa5357b6d2a836fea2af519d5650fe77",
+  "license": "Apache-2.0",
+  "maintainers": [
+    {
+      "email": "cagatay.civici@gmail.com",
+      "name": "cagatay.civici"
+    }
+  ],
+  "name": "primeng",
+  "optionalDependencies": {},
+  "peerDependencies": {
+    "angular2": "2.0.0-beta.13",
+    "es6-shim": "^0.35.0",
+    "primeui": "4.1.7",
+    "reflect-metadata": "0.1.2",
+    "rxjs": "5.0.0-beta.2",
+    "systemjs": "0.19.25",
+    "zone.js": "0.6.6"
+  },
+  "readme": "ERROR: No README data found!",
+  "scripts": {
+    "lite": "lite-server",
+    "start": "concurrent \"npm run tsc:w\" \"npm run lite\" ",
+    "tsc": "tsc",
+    "tsc:w": "tsc -w"
+  },
+  "version": "1.0.0-beta.1"
+}

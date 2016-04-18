@@ -1,0 +1,11 @@
+﻿<ibp-navbar (sideBarPosition)="sideBarStyle($event)"></ibp-navbar>
+
+
+<div class="mainContent" [class.active]="defaultContent">
+
+    <router-outlet></router-outlet>
+
+
+</div>
+
+    <ibp-footer></ibp-footer>

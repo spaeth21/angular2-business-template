@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "CRM Management";
+}
+
+<form id="antiForgeryForm">
+    @Html.AntiForgeryToken()
+</form>
+<my-app>
+    <img id="loading" src="~/images/loading.svg" /></my-app>
+
+
+@section Scripts{
+<script>
+            System.config({
+                map:{
+                    app: "/app",
+                    primeng: 'lib/npmlibs/primeng'
+                },
+                 packages: {
+                     'app': { main: './boot/boot', defaultExtensions: 'js' },
+                                'lib': { defaultExtensions: 'js' }
+                            }
+                        });
+
+                        System.import('app')
+                            .then(null, console.error.bind(console));
+
+</script>
+    }

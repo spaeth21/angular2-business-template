@@ -1,0 +1,28 @@
+﻿
+.headerBlock {
+    background-color: #1A1E26;
+    height:40px;
+    width: 100%;
+    position: relative;
+    padding-bottom:10px;
+    border-radius: 2px;
+}
+    .headerBlock .mainTitle {
+        top: 20%;
+        left: 2%;
+        position: absolute;
+        color:#EBE0F5;
+        font-size:18px;
+    }
+    .headerBlock .secondaryTitle {
+        position: absolute;
+        top: 30%;
+        right: 2%;
+        font-size:12px;
+        transition-duration: 500ms;
+    }
+
+    .headerBlock:hover  .secondaryTitle {
+        color:azure;
+        transition-duration: 500ms;
+    }

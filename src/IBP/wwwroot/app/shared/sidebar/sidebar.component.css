@@ -1,0 +1,70 @@
+﻿
+.customSideBar {
+    width: 90px;
+    overflow: visible !important;
+    background-color:#1A1E26 !important;
+    color: #595F65 !important;
+    text-align: center;
+    transition-duration: 500ms;
+
+}
+    .customSideBar.active {
+    width:40px;
+    transition-duration: 500ms;
+    }
+.sideBarDropDown {
+    text-align: center;
+    border-bottom: 1px solid #222936;
+}
+.openRight {
+top: 0 !important; left: 100% !important;
+}
+.side-nav li {
+  float: none;
+  padding: 0 0;
+  line-height: 20px;
+  cursor: pointer;
+}
+.minibar {
+    width: 40px;
+    transition-duration: 500ms;
+}
+.minibar li {
+  float: none;
+  padding: 0 0;
+  line-height: 30px;
+  cursor: pointer;
+}
+.minibar li span {
+  transform: scale(1.3, 1.3);
+}
+.hideText {
+    font-size: 0px;
+    opacity: 0;
+    transition: all ease-out 400ms;
+}
+
+.hideTextActive {
+    font-size: 10px;
+    opacity: 1;
+    transition: all ease-in 400ms;
+}
+.side-nav li:hover, .side-nav li.active {
+  background-color: #222936;
+  color:#5894F2;
+
+}
+#sideBarIcon > div > span > i {
+        transition-duration: 800ms;
+}
+#sideBarIcon:hover > div > span > i {
+    overflow: hidden;
+  transform: scale(1.2, 1.2);
+        transition-duration: 800ms;
+}
+
+
+.sideNavSpacing {
+    padding: 10px 10px 10px 10px;
+
+}

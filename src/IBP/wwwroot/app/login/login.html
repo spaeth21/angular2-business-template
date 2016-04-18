@@ -1,0 +1,52 @@
+﻿<div class="container body-content">
+    <div class="container">
+        <div class="row center">
+            <div class="col l12 hidden-sm hidden-md hidden-xs">
+                <h2 class="fontWelcome">Welcome to IBP</h2><hr />
+            </div>
+        </div>
+        <div class="row center">
+            <div class="col s12 l6 m10 offset-l3 ">
+                <div class="card panelColor">
+                    <div class="card-content">
+                        <div class="card-title">Login</div>
+                        <form [ngFormModel]="loginForm" >
+                            <div class="input-field login">
+                                <input id="user_name" type="text" class="validate" ngControl="userName">
+                                <label for="user_name">User Name</label>
+                                <div class="help-block white-text" *ngIf="loginForm.controls.userName.hasError('required')">
+                                    *Field is required.
+                                </div>
+                            </div>
+                            <div class="input-field login">
+                                <input id="password" type="password" class="validate" ngControl="password">
+                                <label for="password">Password</label>
+                                <div class="help-block white-text" *ngIf="loginForm.controls.password.hasError('required')">
+                                    *Field is required.
+                                </div>
+                            </div>
+                            <div class="row">
+                                 <label>{{errorMessage}}</label>
+                            </div>
+                            <div class="card-action">
+                                <div class="row">
+                                    <button class="btn waves-effect waves-light submitButtonColor" (click)="login()"  [disabled]="!loginForm.valid" name="">
+                                        Login
+                                        <i class="fa fa-angle-double-right"></i>
+                                    </button>
+                                </div>
+                                <div class="row">
+                                    <button class="btn waves-effect waves-light red lighten-1" type="button" name="">
+                                        Forgot
+                                        <i class="fa fa-unlock-alt"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,65 @@
+﻿<div class="row">
+    <div class="col s4">
+        <panel-header mainTitle="Create Job" secondaryTitle="Create a new Job"></panel-header>
+    </div>
+</div>
+<div class="row">
+    <div class="col s4">
+        <panel-body mainDescription="Job Details" (mouseenter)="onFocusElement($event, jobNameLocal)" backgroundColor="#4060BD" panelSize="fixedLarge">
+            <div class="panelTopButtons">
+                <button class="btn waves-effect newButton" [disabled]="!jobForm.valid">+ New</button>
+            </div>
+            <form [ngFormModel]="jobForm">
+                <div class="row">
+                    <div class="input-field col l12" style="margin-top: 45px">
+                        <input #jobNameLocal (mouseenter)="onFocusElement($event, jobNameLocal)" type="text" ngControl="jobName" id="jobName" class="validate" />
+                        <label for="jobName">Job Name</label>
+                    </div>
+
+                    <div class="input-field col l12">
+                        <input #jobPhoneLocal (mouseenter)="onFocusElement($event, jobPhoneLocal)" type="text" id="jobPhone" ngControl="phone" class="validate" />
+                        <label for="jobPhone">Phone</label>
+                    </div>
+                    <div class="input-field col l12">
+                        <input #jobAddressLocal (mouseenter)="onFocusElement($event, jobAddressLocal)" type="text" id="jobAddress" ngControl="address" class="validate" />
+                        <label for="jobAddress">Address</label>
+                    </div>
+                    <div class="input-field col l12">
+                        <input #jobCityLocal (mouseenter)="onFocusElement($event, jobCityLocal)" type="text" id="jobCity" ngControl="city" class="validate" />
+                        <label for="jobCity">City</label>
+                    </div>
+                    <div class="input-field col l6">
+                        <input #jobStateLocal (mouseenter)="onFocusElement($event, jobStateLocal)" type="text" id="jobState" ngControl="state" class="validate" />
+                        <label for="jobState">State</label>
+                    </div>
+                    <div class="input-field col l6">
+                        <input #jobZipLocal (mouseenter)="onFocusElement($event, jobZipLocal)" type="text" id="jobZip" ngControl="zip" class="validate" />
+                        <label for="jobZip">Zip</label>
+                    </div>
+                    <div class="input-field col l6">
+                        <input #jobBuiltLocal (mouseenter)="onFocusElement($event, jobBuiltLocal)" type="text" id="builtYear" ngControl="built" class="validate" />
+                        <label for="builtYear">Year Home Built</label>
+                    </div>
+                    <div class="input-field col l6">
+                        <input #jobStatusLocal (mouseenter)="onFocusElement($event, jobStatusLocal)" type="text" id="status" ngControl="status" class="validate" />
+                        <label for="status">Status</label>
+                    </div>
+                    <div class="input-field col l6">
+                        <input #jobRefferalLocal (mouseenter)="onFocusElement($event, jobRefferalLocal)" type="text" id="referralType" ngControl="referral" class="validate" />
+                        <label for="referralType">Referral Type</label>
+                    </div>
+                    <div class="input-field col l12">
+                        <textarea #jobIssuesLocal (mouseenter)="onFocusElement($event, jobIssuesLocal)" id="issues" ngControl="issues" class="materialize-textarea"></textarea>
+                        <label for="issues">Issues</label>
+                    </div>
+                </div>
+            </form>
+            <div class="panelBottomButtonsRight">
+                <button class="btn waves-effect newButton" [disabled]="!jobForm.valid">+ New</button>
+            </div>
+            <div class="panelBottomButtonsLeft">
+                <button class="btn waves-effect">View Existing Jobs</button>
+            </div>
+        </panel-body>
+    </div>
+</div>

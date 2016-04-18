@@ -1,0 +1,46 @@
+﻿<div class="row">
+    <div class="col s4">
+        <panel-header mainTitle="Create Sales Person" secondaryTitle="Create a new sales person"></panel-header>
+    </div>
+</div>
+<div class="row">
+    <div class="col s4">
+        <panel-body mainDescription="Sales Person Details" (mouseenter)="onFocusElement($event, salesFirstNameLocal)" panelSize="fixedLarge">
+            <div class="panelTopButtons">
+                <button class="btn newButton waves-effect">+ New</button>
+            </div>
+            <form>
+                <div class="row">
+                    <div class="input-field" style="margin-top:45px">
+                        <input #salesFirstNameLocal type="text" id="firstName" (mouseenter)="onFocusElement($event, salesFirstNameLocal)" class="validate" />
+                        <label for="firstName">Sales Person First Name</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field">
+                        <input #salesLastNameLocal type="text" id="lastName" (mouseenter)="onFocusElement($event, salesLastNameLocal)" class="validate" />
+                        <label for="lastName">Last Name</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field">
+                        <input #salesPhoneLocal type="text" id="salesPhone" (mouseenter)="onFocusElement($event, salesPhoneLocal)" class="validate" />
+                        <label for="salesPhone">Phone</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field">
+                        <input #salesEmailLocal type="text" id="salesEmail" (mouseenter)="onFocusElement($event, salesEmailLocal)" class="validate" />
+                        <label for="salesEmail">Email</label>
+                    </div>
+                </div>
+            </form>
+            <div class="panelBottomButtonsRight">
+                <button class="btn waves-effect newButton">+ New</button>
+            </div>
+            <div class="panelBottomButtonsLeft">
+                <button class="btn waves-effect">View Existing Sales People</button>
+            </div>
+        </panel-body>
+    </div>
+</div>
