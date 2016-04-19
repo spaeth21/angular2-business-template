@@ -17,6 +17,13 @@ namespace IBP.Models
             // For example, you can rename the ASP.NET Identity table names and more.
             // Add your customizations after calling base.OnModelCreating(builder);
         }
-        public DbSet<Test> Test { get; set; }
+        public DbSet<Company> Company { get; set; }
+        public DbSet<ContactType> ContactType { get; set; }
+        public DbSet<Customer> Customer { get; set; }
+        public DbSet<CustomerContact> CustomerContact { get; set; }
+        public DbSet<Job> Job { get; set; }
+        public DbSet<JobContactType> JobContactType { get; set; }
+        public DbSet<SalesPerson> SalesPerson { get; set; }
+
     }
 }

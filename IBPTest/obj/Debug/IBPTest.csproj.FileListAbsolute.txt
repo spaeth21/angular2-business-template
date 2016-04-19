@@ -1,0 +1,6 @@
+D:\projects\Clients\IBP\IBP\IBPTest\bin\Debug\IBPTest.dll
+D:\projects\Clients\IBP\IBP\IBPTest\bin\Debug\IBPTest.pdb
+D:\projects\Clients\IBP\IBP\IBPTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\projects\Clients\IBP\IBP\IBPTest\obj\Debug\IBPTest.csprojResolveAssemblyReference.cache
+D:\projects\Clients\IBP\IBP\IBPTest\obj\Debug\IBPTest.dll
+D:\projects\Clients\IBP\IBP\IBPTest\obj\Debug\IBPTest.pdb

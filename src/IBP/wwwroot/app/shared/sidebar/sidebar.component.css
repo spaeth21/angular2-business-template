@@ -41,13 +41,13 @@ top: 0 !important; left: 100% !important;
 .hideText {
     font-size: 0px;
     opacity: 0;
-    transition: all ease-out 400ms;
+    transition: all ease-out 200ms;
 }
 
 .hideTextActive {
     font-size: 10px;
     opacity: 1;
-    transition: all ease-in 400ms;
+    transition: all ease-in 200ms;
 }
 .side-nav li:hover, .side-nav li.active {
   background-color: #222936;

@@ -33,7 +33,7 @@ System.register(['angular2/core', 'angular2/router', '../home/home.component', '
                 }
                 AppComponent = __decorate([
                     core_1.Component({
-                        selector: 'my-app',
+                        selector: 'ibp-app',
                         template: ' <router-outlet></router-outlet>',
                         directives: [router_1.ROUTER_DIRECTIVES]
                     }),

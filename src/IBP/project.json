@@ -32,16 +32,25 @@
     "Microsoft.AspNet.Mvc.WebApiCompatShim": "6.0.0-rc1-final",
     "IdentityServer4": "1.0.0-beta1-update1",
     "Microsoft.AspNet.Authentication.JwtBearer": "1.0.0-rc1-final",
-    "Microsoft.AspNet.Authentication.OpenIdConnect": "1.0.0-rc1-final"
+    "Microsoft.AspNet.Authentication.OpenIdConnect": "1.0.0-rc1-final",
+    "System.IdentityModel.Tokens.Jwt": "5.0.0-rc1-211161024",
+    "xunit.runner.dnx": "2.1.0-*",
+    "xunit": "2.1.0-*"
+
   },
 
   "commands": {
     "web": "Microsoft.AspNet.Server.Kestrel",
-    "ef": "EntityFramework.Commands"
+    "ef": "EntityFramework.Commands",
+    "test": "xunit.runner.dnx"
   },
 
   "frameworks": {
-    "dnx451": { },
+    "dnx451": {
+      "dependencies": {
+        "System.IdentityModel.Tokens.Jwt": "4.0.2.206221351"
+      }
+    },
     "dnxcore50": { }
   },
 

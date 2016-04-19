@@ -14,7 +14,7 @@
                             <div class="input-field login">
                                 <input id="user_name" type="text" class="validate" ngControl="userName">
                                 <label for="user_name">User Name</label>
-                                <div class="help-block white-text" *ngIf="loginForm.controls.userName.hasError('required')">
+                                <div class="help-block white-text"  *ngIf="loginForm.controls.userName.hasError('required')">
                                     *Field is required.
                                 </div>
                             </div>
@@ -30,7 +30,7 @@
                             </div>
                             <div class="card-action">
                                 <div class="row">
-                                    <button class="btn waves-effect waves-light submitButtonColor" (click)="login()"  [disabled]="!loginForm.valid" name="">
+                                    <button class="btn waves-effect waves-light submitButtonColor"  (click)="login()"  [disabled]="!loginForm.valid" name="">
                                         Login
                                         <i class="fa fa-angle-double-right"></i>
                                     </button>

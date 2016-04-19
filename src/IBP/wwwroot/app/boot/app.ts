@@ -7,7 +7,7 @@ import {LoginComponent} from '../login/login';
 
 
 @Component({
-    selector: 'my-app',
+    selector: 'ibp-app',
     template: ' <router-outlet></router-outlet>',
     directives: [ROUTER_DIRECTIVES]
 })

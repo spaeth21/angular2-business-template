@@ -8,57 +8,57 @@ using IBP.Models;
 namespace IBP.Controllers
 {
     [Produces("application/json")]
-    [Route("api/Tests")]
-    public class TestsController : Controller
+    [Route("api/ContactTypes")]
+    public class ContactTypesController : Controller
     {
         private ApplicationDbContext _context;
 
-        public TestsController(ApplicationDbContext context)
+        public ContactTypesController(ApplicationDbContext context)
         {
             _context = context;
         }
 
-        // GET: api/Tests
+        // GET: api/ContactTypes
         [HttpGet]
-        public IEnumerable<Test> GetTest()
+        public IEnumerable<ContactType> GetContactType()
         {
-            return _context.Test;
+            return _context.ContactType;
         }
 
-        // GET: api/Tests/5
-        [HttpGet("{id}", Name = "GetTest")]
-        public IActionResult GetTest([FromRoute] int id)
+        // GET: api/ContactTypes/5
+        [HttpGet("{id}", Name = "GetContactType")]
+        public IActionResult GetContactType([FromRoute] int id)
         {
             if (!ModelState.IsValid)
             {
                 return HttpBadRequest(ModelState);
             }
 
-            Test test = _context.Test.Single(m => m.TestId == id);
+            ContactType contactType = _context.ContactType.Single(m => m.ContactTypeId == id);
 
-            if (test == null)
+            if (contactType == null)
             {
                 return HttpNotFound();
             }
 
-            return Ok(test);
+            return Ok(contactType);
         }
 
-        // PUT: api/Tests/5
+        // PUT: api/ContactTypes/5
         [HttpPut("{id}")]
-        public IActionResult PutTest(int id, [FromBody] Test test)
+        public IActionResult PutContactType(int id, [FromBody] ContactType contactType)
         {
             if (!ModelState.IsValid)
             {
                 return HttpBadRequest(ModelState);
             }
 
-            if (id != test.TestId)
+            if (id != contactType.ContactTypeId)
             {
                 return HttpBadRequest();
             }
 
-            _context.Entry(test).State = EntityState.Modified;
+            _context.Entry(contactType).State = EntityState.Modified;
 
             try
             {
@@ -66,7 +66,7 @@ namespace IBP.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!TestExists(id))
+                if (!ContactTypeExists(id))
                 {
                     return HttpNotFound();
                 }
@@ -79,23 +79,23 @@ namespace IBP.Controllers
             return new HttpStatusCodeResult(StatusCodes.Status204NoContent);
         }
 
-        // POST: api/Tests
+        // POST: api/ContactTypes
         [HttpPost]
-        public IActionResult PostTest([FromBody]Test test)
+        public IActionResult PostContactType([FromBody] ContactType contactType)
         {
             if (!ModelState.IsValid)
             {
                 return HttpBadRequest(ModelState);
             }
 
-            _context.Test.Add(test);
+            _context.ContactType.Add(contactType);
             try
             {
                 _context.SaveChanges();
             }
             catch (DbUpdateException)
             {
-                if (TestExists(test.TestId))
+                if (ContactTypeExists(contactType.ContactTypeId))
                 {
                     return new HttpStatusCodeResult(StatusCodes.Status409Conflict);
                 }
@@ -105,28 +105,28 @@ namespace IBP.Controllers
                 }
             }
 
-            return CreatedAtRoute("GetTest", new { id = test.TestId }, test);
+            return CreatedAtRoute("GetContactType", new { id = contactType.ContactTypeId }, contactType);
         }
 
-        // DELETE: api/Tests/5
+        // DELETE: api/ContactTypes/5
         [HttpDelete("{id}")]
-        public IActionResult DeleteTest(int id)
+        public IActionResult DeleteContactType(int id)
         {
             if (!ModelState.IsValid)
             {
                 return HttpBadRequest(ModelState);
             }
 
-            Test test = _context.Test.Single(m => m.TestId == id);
-            if (test == null)
+            ContactType contactType = _context.ContactType.Single(m => m.ContactTypeId == id);
+            if (contactType == null)
             {
                 return HttpNotFound();
             }
 
-            _context.Test.Remove(test);
+            _context.ContactType.Remove(contactType);
             _context.SaveChanges();
 
-            return Ok(test);
+            return Ok(contactType);
         }
 
         protected override void Dispose(bool disposing)
@@ -138,9 +138,9 @@ namespace IBP.Controllers
             base.Dispose(disposing);
         }
 
-        private bool TestExists(int id)
+        private bool ContactTypeExists(int id)
         {
-            return _context.Test.Count(e => e.TestId == id) > 0;
+            return _context.ContactType.Count(e => e.ContactTypeId == id) > 0;
         }
     }
 }

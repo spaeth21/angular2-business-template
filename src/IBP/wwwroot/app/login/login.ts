@@ -27,8 +27,8 @@ export class LoginComponent {
     options: RequestOptions;
 
     constructor(public router: Router, fb: FormBuilder, public http: Http) {
-        //this.antiForgeryToken = document.getElementById('antiForgeryForm').children[0].attributes.getNamedItem('value').textContent;
-        //this.forgeryHeader = new Headers([{ '__RequestVerificationToken': this.antiForgeryToken }]);
+        this.antiForgeryToken = document.getElementById('antiForgeryForm').children[0].attributes.getNamedItem('value').textContent;
+        this.forgeryHeader = new Headers([{ '__RequestVerificationToken': this.antiForgeryToken }]);
         //console.dir(this.forgeryHeader);
         //this.options = new RequestOptions({ headers: this.forgeryHeader });
 
@@ -41,10 +41,13 @@ export class LoginComponent {
 
     login() {
         this.errorMessage = null;
-        let data = { email: this.loginForm.controls['userName'].value, password: this.loginForm.controls['password'].value }
+        let data = { email: this.loginForm.controls['userName'].value, password: this.loginForm.controls['password'].value, __RequestVerificationToken: this.antiForgeryToken }
         let sendData = JSON.stringify(data);
-        let headers = new Headers({ 'Content-Type': 'application/json' });
+        let headers = new Headers({
+            'X-Request-Verification-Token': this.antiForgeryToken });
         let options = new RequestOptions({ headers: headers });
+
+        
 
         this.http.post('Account/Login', sendData, options).subscribe(data => {
             setTimeout(() => {

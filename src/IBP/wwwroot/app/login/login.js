@@ -29,12 +29,12 @@ System.register(['angular2/core', 'angular2/router', 'angular2/common', 'angular
         execute: function() {
             LoginComponent = (function () {
                 function LoginComponent(router, fb, http) {
-                    //this.antiForgeryToken = document.getElementById('antiForgeryForm').children[0].attributes.getNamedItem('value').textContent;
-                    //this.forgeryHeader = new Headers([{ '__RequestVerificationToken': this.antiForgeryToken }]);
-                    //console.dir(this.forgeryHeader);
-                    //this.options = new RequestOptions({ headers: this.forgeryHeader });
                     this.router = router;
                     this.http = http;
+                    this.antiForgeryToken = document.getElementById('antiForgeryForm').children[0].attributes.getNamedItem('value').textContent;
+                    this.forgeryHeader = new http_1.Headers([{ '__RequestVerificationToken': this.antiForgeryToken }]);
+                    //console.dir(this.forgeryHeader);
+                    //this.options = new RequestOptions({ headers: this.forgeryHeader });
                     this.loginForm = fb.group({
                         userName: [null, common_1.Validators.compose([common_1.Validators.required])],
                         password: [null, common_1.Validators.compose([common_1.Validators.required])]
@@ -43,9 +43,10 @@ System.register(['angular2/core', 'angular2/router', 'angular2/common', 'angular
                 LoginComponent.prototype.login = function () {
                     var _this = this;
                     this.errorMessage = null;
-                    var data = { email: this.loginForm.controls['userName'].value, password: this.loginForm.controls['password'].value };
+                    var data = { email: this.loginForm.controls['userName'].value, password: this.loginForm.controls['password'].value, __RequestVerificationToken: this.antiForgeryToken };
                     var sendData = JSON.stringify(data);
-                    var headers = new http_1.Headers({ 'Content-Type': 'application/json' });
+                    var headers = new http_1.Headers({
+                        'X-Request-Verification-Token': this.antiForgeryToken });
                     var options = new http_1.RequestOptions({ headers: headers });
                     this.http.post('Account/Login', sendData, options).subscribe(function (data) {
                         setTimeout(function () {
